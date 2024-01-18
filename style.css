@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080808;
+    color:white;
+   
+       
+    
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/pink-2569355.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+}
+.container{
+    padding:10px 10px ;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    
+    margin: 0;
+  
+
+    
+}
+.logo{
+    width: 30vh;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    list-style: none;
+    margin: 10px 20px;
+    position: relative;
+    font-weight: 900;
+    font-size: larger;
+    border: 4px solid rgb(181, 170, 170);
+    border-radius: 10px;
+    padding: 7px;
+   
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fc9ec2;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.6s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-left: 4%;
+    margin-top: 6.5%;
+    font-size: 2.5vw;
+}
+
+
+.header-text h1 span{
+    color:#fc9ec2;
+}
+.about-col1 img{
+   width: 100%;
+   /* border: 5px solid red; */
+   border-radius: 55px;
+  
+    
+}
+.row{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+    
+}
+
+.about-col2 h1{
+   color:#fc9ec2 ;
+   text-decoration: underline;
+   margin-bottom: 5em;
+   text-align: center;
+   font-size: xx-large;
+}
+
+.about-col2  p{
+    line-height: 1.5em;
+    
+}
+.about-col1 {
+    flex-basis: 30%;
+}
+.about-col2 {
+    width: 50%;
+}
+.typer-container {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.2em;
+    border-right: 2px solid #333; /* Simulates the blinking cursor */
+  }
+  
+  .typer-text {
+    display: inline-block;
+    padding-right: 10px; /* Adjust as needed for spacing */
+    animation: typer 2s steps(30, end);
+  }
+  
+  @keyframes typer {
+    from, to {
+      width: 0;
+    }
+  }
+ .header-text{
+    padding: 0px 60px;
+ }
+ #skills{
+    
+    text-align: center;
+    font-size: larger;
+    padding-top: 60px ;
+   
+   
+    
+ }
+ #skills>h1{
+    margin-bottom: 60px;
+    text-decoration: underline;
+ }
+
+ .row2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    height: 15em;
+    
+   
+ }
+ .skill{
+    background-color:rgb(181, 172, 172);
+    width: 17vw;
+   padding-top: 1.7em;
+   border-radius: 15px;
+   transition: 0.5s;
+   transform: 0.5s;
+ }
+ .skill span,i{
+    margin-bottom: 30px;
+    font-size: 50px;
+ }
+ /* #f4b6ce */
+ .skill h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+ }
+ .skill:hover{
+    background-color: #f4b6ce;
+    transform: translateY(-17px);
+ }
+ .contact-left{
+    flex-basis: 35%;
+ }
+ .contact-right{
+    flex-basis: 60%;
+ }
+ .contact-left p{
+    margin-top: 30px;
+ }
+ .contact-left p i,span{
+         font-size: 25px;
+         margin-right: 15px;
+         color: #f4b6ce;
+ }
+ .social-icons a  {
+       text-decoration: none;
+       font-size: 30px;
+       margin-right: 15px;
+       color: rgb(181, 172, 172);
+       display: inline-block;
+       transition: 0.5s;
+ }
+ .social-icons a :hover{
+    color: #f4b6ce;
+    transform: translateX(-5px);
+ }
+ 
