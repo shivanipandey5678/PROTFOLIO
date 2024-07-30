@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://kit.fontawesome.com/c2403c5c1a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&display=swap" rel="stylesheet">
+    <title>Shivani Pandey || Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./Assets/favicon.ico">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .active {
+            font-weight: bold;
+        }
+        .sidebar {
+            display: none;
+        }
+        /* Add your existing CSS rules here */
+    </style>
+</head>
+<body>
+    <!-- hero section start -->
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul>
+                <li class="hideOnMobile active"><a href="#HOME">Home</a></li>
+                <li class="hideOnMobile"><a href="#ABOUT">About Us</a></li>
+                <li class="hideOnMobile"><a href="#SKILL">Skill</a></li>
+                <li class="hideOnMobile"><a href="#PROJECT">Project</a></li>
+                
+                <li class="hideOnMobile"><a href="#CONTACT">Contact</a></li>
+                <li class="hideOnMobile">
+                    <button style="background-color: #f9004d;" onclick="downloadFile()">Resume</button>
+                </li>
+                
+                <li onclick="showSliderbar()"><a href="#"><img src="./Assets/menu (1).png" alt="Image Description" style="width: 45px;" id="showSlider"></a></li>
+            </ul>
+            <ul class="sidebar">
+                <li onclick="hideSlider()"> <a href="#"><img src="./Assets/close.png" alt="" id="hide"></a></li>
+                <li><a href="#HOME">Home</a></li>
+                <li><a href="#ABOUT">About Us</a></li>
+                <li><a href="#SKILL">Skill</a></li>
+                <li><a href="#PROJECT">Project</a></li>
+                
+                <li><a href="#CONTACT">Contact</a></li>
+                <li>
+                    <button style="background-color: #f9004d;" onclick="downloadFile()"><a href="#">Resume</a></button>
+                </li>
+            </ul>
+        </nav>
+        <section id="HOME">
+            <div class="content">
+                <h4>Hello, my name is</h4>
+                <h1>Shivani<span>pandey</span> </h1>
+                <h3>I am a <span id="dynamic-text"></span> </h3>
+                <button class="resume_btn">Resume</button>
+                <button class="resume_btn" onclick="downloadFile()"><a href="https://github.com/shivanipandey5678" target="_blank">Github</a></button>
+            </div>
+        </section>
+    </div>
+
+    <!-- about section started -->
+    <section class="about" id="ABOUT">
+        <div class="main">
+            <div class="photo-container">
+                <h2 class="responsive section_subtitle">About Me</h2>
+                <img src="./Assets/dp (1).jpeg" alt="shivani-photo" id="my_photo">
+            </div>
+            <div class="about_text">
+                <h3 class="not_responsive section_subtitle">About Me</h3>
+                <h5>Developer &<span> Designer</span></h5>
+                <p>As a frontend developer intern, I bring a blend of CSS, JavaScript, HTML, and React Chakra-ui skills, all fueled by my unwavering commitment to lifelong learning. I thrive in collaborative environments, eagerly soaking up knowledge from others and constantly seeking opportunities to enhance my abilities. With a solid footing in frontend technologies, I'm driven to continually refine my craft and evolve as a developer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Techstack" id="SKILL">
+        <h2 class="section_subtitle">My <span>Technical</span> Skills</h2>
+        <div id="techstack">
+            <span><img src="https://skillicons.dev/icons?i=html" class="skillicon"><h4>HTML</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=css" alt="CSS" class="skillicon"><h4>CSS</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=javascript" alt="javascript" class="skillicon"><h4>JavaScript</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=react" alt="react" class="skillicon"><h4>React</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=github" alt="github" class="skillicon"><h4>Github</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=postman" alt="postman" class="skillicon"><h4>Postman</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=vscode" alt="vscode" class="skillicon"><h4>vscode</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=netlify" alt="netlify" class="skillicon"/><h4>netlify</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=replit" alt="replit" class="skillicon"/><h4>replit</h4></span>
+            <span><img src="https://skillicons.dev/icons?i=vite" alt="vite" class="skillicon"/><h4>vite</h4></span>
+        </div>
+    </section>
+
+    
+
+    <!-- GitHub Stats and Language Card Sections -->
+    <section class="GitHubStats" id="GITSTATS">
+        <h2 class="section_subtitle">GitHub Stats</h2>
+        <p><img class="first git" src="https://github-readme-stats.vercel.app/api/top-langs?username=shivanipandey5678&show_icons=true&locale=en&layout=compact&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" alt="shivanipandey5678" /></p>
+        <p><img class="second git" src="https://github-readme-stats.vercel.app/api?username=shivanipandey5678&show_icons=true&locale=en&bg_color=30,e96443,904e95&title_color=fff&text_color=fff" alt="shivanipandey5678" /></p>
+        <p ><img class="third git" src="https://github-readme-streak-stats.herokuapp.com/?user=shivanipandey5678&background=30,e96443,904e95&stroke=ffffff&ring=ffffff&fire=ffb86c&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff" alt="shivanipandey5678" /></p>
+        <H2  class="section_subtitle">Github Calendar</h2>
+            <div class="react-activity-calendar" style="text-align:center;">
+                <img style="width: 75%;" src="https://ghchart.rshah.org/shivanipandey5678" alt="GitHub Contribution Chart">
+            </div>
+    </section>
+
+    <section id="PROJECT">
+        <h2 class="section_subtitle">Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <div class="project-img">
+                 <img src="./Assets/react-app.png" alt="Project Image">
+               </div>
+               <div class="project-details">
+                <h3><span>Khol-s-website </span>Clone</h3>
+                <p>The Kohl's website clone is a comprehensive project built using React and Chakra UI and JS , showcasing advanced frontend and backend capabilities. It features secure user authentication and dynamic routing for smooth navigation. The real-time password feedback enhances user experience during account creation. Users can easily add items to their cart and delete them, with changes reflected instantly thanks to seamless integration with Axios. The project simulates a backend using JSON Server, deployed on Render, and efficiently manages user data with LocalStorage. </p>
+                <p><strong><span>Tech Stack:</span> </strong>HTML5, CSS3, JavaScript, React, Chakra UI, JSON Server, Axios, LocalStorage
+
+                </p>
+                <div class="project-buttons">
+                    <button class="btn"><a href="https://github.com/shivanipandey5678/Khol-s-website" target="_blank">GitHub link</a></button>
+                    <button class="btn"><a href="http://khol-s-website.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo</a></button>
+                </div>
+               </div>
+                
+            </div>
+            <div class="project">
+                <div class="project-img">
+                    <img src="./Assets/big basket.png" alt="Project Image">
+                </div>
+                <div class="project-details">
+                    <h3> <span>bigbasket</span>clone</h3>
+                    <p>The BigBasket Clone project is a fully responsive e-commerce website designed to offer an optimal user experience across all devices, from mobile phones to desktops. It features advanced sorting functionality, allowing users to sort products by price, rating, and discount in both ascending and descending orders. A robust search feature enables users to find products quickly from the product page. Product data is dynamically retrieved from a JSON file, simulating a realistic backend environment. The project includes user authentication capabilities, allowing users to sign up, log in, and add products to their cart, with secure redirection to the login page if they attempt to access the cart without logging in. LocalStorage is used to store user data and cart information, ensuring persistence and quick access. </p>
+                    <p><strong><span>Tech Stack: </span></strong> HTML5, CSS3, JavaScript, Fetch API, LocalStorage</p>
+
+
+                    <div class="project-buttons">
+                        <button class="btn"><a href="https://github.com/shivanipandey5678/project_bigbasket_clone" target="_blank">GitHub link</a></button>
+                        <button class="btn"><a href="https://66255088e17b48e08b3448f1--spiffy-duckanoo-e6e19b.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></button>
+                    </div>
+                </div>
+                
+               
+            </div>
+            <div class="project">
+                <div class="project-img">
+                    <img src="./Assets/image generater.png" alt="Project Image">
+                </div>
+                <div class="project-details">
+                    <h3> <span> Image Search </span>App</h3>
+                    <p>This web application lets you search for high-quality images using the Unsplash API. Enter a keyword to explore a diverse gallery of stunning photos, and use the "Show More" button to load additional images. The app is fully responsive, ensuring a smooth experience on all devices.</p>
+                    <p><strong><span>Tech Stack:</span> </strong> HTML5, CSS3, JavaScript, Unsplash API</p>
+                    <div class="project-buttons">
+                        <button class="btn"><a href="https://github.com/shivanipandey5678/Interactive-Image-Search-Engine" target="_blank">GitHub link</a></button>
+                        <button class="btn"><a href="https://ephemeral-smakager-d474d4.netlify.app/" target="_blank" rel="noopener noreferrer">Live Demo</a></button>
+                    </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- footer start -->
+
+    <section id="CONTACT">
+        <div class="contact-me">
+            <div class="title">
+                <h2  class="section_subtitle">Contact me</h2>
+            </div>
+            <div class="social-media">
+                <a href="mailto:shivanipandey0107@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a href="tel:+919958913697"><i class="fa-solid fa-phone"></i></a>
+                <a href="https://www.linkedin.com/in/shivani-pandey-029600288/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/shivanipandey5678" target="_blank"><i class="fa-brands fa-github"></i></a>
+             </div>
+             <h3 class="end">Thank you for exploring my digital journey. Let's craft something extraordinary together!</h3>
+           
+           
+
+        </div>
+     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navLinks = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('section');
+
+            function changeActiveLink() {
+                let index = sections.length;
+
+                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+
+            changeActiveLink();
+            window.addEventListener('scroll', changeActiveLink);
+
+            navLinks.forEach((link) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    document.querySelector(link.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            document.querySelector('#showSlider').addEventListener('click', () => {
+                document.querySelector('.sidebar').style.display = 'block';
+            });
+
+            document.querySelector('#hide').addEventListener('click', () => {
+                document.querySelector('.sidebar').style.display = 'none';
+            });
+        });
+        const adjectives = [
+   "Articulate",
+   
+    "Effective Speaker",
+    " dedicated Learner",
+
+    "Frontend Developer",
+    "Problem-solver",
+    
+    "Fitness-enthusiast",
+    "Connector",
+    "Web Developer"
+   
+];
+let currentIndex = 0;
+
+function updateText() {
+    const dynamicTextElement = document.getElementById("dynamic-text");
+    dynamicTextElement.textContent = adjectives[currentIndex];
+    currentIndex = (currentIndex + 1) % adjectives.length;
+}
+
+setInterval(updateText, 2000); // Change the adjective every 2 seconds
+
+function downloadFile() {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1NEtlXlnLgNOSSAFSexzNHBQwtuhXFJse';
+    link.download = 'Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+    </script>
+</body>
+</html>
