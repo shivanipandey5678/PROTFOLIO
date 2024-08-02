@@ -199,17 +199,18 @@
 
         // Function to handle opening the Google Drive link and downloading the file
         function handleResumeClick() {
-            // Open Google Drive link
-            window.open('https://drive.google.com/file/d/1mVrUwMywmRWtUX3fp9BANacLyoy1kuGy/view?usp=sharing', '_blank');
+    // Open Google Drive link
+    window.open('https://drive.google.com/file/d/1QyC1dTLrMrv-xu4ehdcg4RLiI6bygSav/view?usp=sharing', '_blank');
 
-            // Download the file
-            const link = document.createElement('a');
-            link.href = './Assets/ShivaniPandey-Resume.jpg'; // Path to your resume file in the Assets directory
-            link.download = 'ShivaniPandey-Resume.jpg';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        }
+    // Create a link to download the file
+    const link = document.createElement('a');
+    link.href = './Assets/Resume-shivaniPandey.jpg'; // Corrected path
+    link.download = 'Resume-shivaniPandey.jpg';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
 
         // Functions to toggle sidebar visibility
         function showSliderbar() {
