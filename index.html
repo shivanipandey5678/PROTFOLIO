@@ -38,12 +38,10 @@
                 <li class="hideOnMobile"><a href="#ABOUT">About Us</a></li>
                 <li class="hideOnMobile"><a href="#SKILL">Skill</a></li>
                 <li class="hideOnMobile"><a href="#PROJECT">Project</a></li>
-                
                 <li class="hideOnMobile"><a href="#CONTACT">Contact</a></li>
                 <li class="hideOnMobile">
-                    <button style="background-color: #f9004d;" onclick="downloadFile()">Resume</button>
+                    <button style="background-color: #f9004d;" class="btn" onclick="handleResumeClick()">Resume</button>
                 </li>
-                
                 <li onclick="showSliderbar()"><a href="#"><img src="./Assets/menu (1).png" alt="Image Description" style="width: 45px;" id="showSlider"></a></li>
             </ul>
             <ul class="sidebar">
@@ -52,20 +50,19 @@
                 <li><a href="#ABOUT">About Us</a></li>
                 <li><a href="#SKILL">Skill</a></li>
                 <li><a href="#PROJECT">Project</a></li>
-                
                 <li><a href="#CONTACT">Contact</a></li>
                 <li>
-                    <button style="background-color: #f9004d;" onclick="downloadFile()"><a href="#">Resume</a></button>
+                    <button style="background-color: #f9004d;" class="btn" onclick="handleResumeClick()">Resume</button>
                 </li>
             </ul>
         </nav>
         <section id="HOME">
             <div class="content">
                 <h4>Hello, my name is</h4>
-                <h1>Shivani<span>pandey</span> </h1>
-                <h3>I am a <span id="dynamic-text"></span> </h3>
-                <button class="resume_btn">Resume</button>
-                <button class="resume_btn" onclick="downloadFile()"><a href="https://github.com/shivanipandey5678" target="_blank">Github</a></button>
+                <h1>Shivani<span>pandey</span></h1>
+                <h3>I am a <span id="dynamic-text"></span></h3>
+                <button class="resume_btn" onclick="handleResumeClick()">Resume</button>
+                <button class="resume_btn"><a href="https://github.com/shivanipandey5678" target="_blank">Github</a></button>
             </div>
         </section>
     </div>
@@ -100,8 +97,6 @@
             <span><img src="https://skillicons.dev/icons?i=vite" alt="vite" class="skillicon"/><h4>vite</h4></span>
         </div>
     </section>
-
-    
 
     <!-- GitHub Stats and Language Card Sections -->
     <section class="GitHubStats" id="GITSTATS">
@@ -173,8 +168,6 @@
         </div>
     </section>
 
-    <!-- footer start -->
-
     <section id="CONTACT">
         <div class="contact-me">
             <div class="title">
@@ -193,73 +186,61 @@
         </div>
      </section>
 
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('nav a');
-            const sections = document.querySelectorAll('section');
+        // Dynamic text for the home page
+        const roles = ["Frontend Developer", "Web Enthusiast", "Creative Designer"];
+        let index = 0;
+        const dynamicText = document.getElementById('dynamic-text');
+        setInterval(() => {
+            dynamicText.textContent = roles[index];
+            index = (index + 1) % roles.length;
+        }, 3000);
 
-            function changeActiveLink() {
-                let index = sections.length;
+        // Function to handle opening the Google Drive link and downloading the file
+        function handleResumeClick() {
+            // Open Google Drive link
+            window.open('https://drive.google.com/file/d/1mVrUwMywmRWtUX3fp9BANacLyoy1kuGy/view?usp=sharing', '_blank');
 
-                while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+            // Download the file
+            const link = document.createElement('a');
+            link.href = './Assets/ShivaniPandey-Resume.jpg'; // Path to your resume file in the Assets directory
+            link.download = 'ShivaniPandey-Resume.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
-                navLinks.forEach((link) => link.classList.remove('active'));
-                navLinks[index].classList.add('active');
-            }
+        // Functions to toggle sidebar visibility
+        function showSliderbar() {
+            document.querySelector('.sidebar').style.display = 'block';
+        }
 
-            changeActiveLink();
-            window.addEventListener('scroll', changeActiveLink);
+        function hideSlider() {
+            document.querySelector('.sidebar').style.display = 'none';
+        }
 
-            navLinks.forEach((link) => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.querySelector(link.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
+        // Adding active class to nav items
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav ul li");
+
+        window.onscroll = () => {
+            let current = "";
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute("id");
+                }
             });
 
-            document.querySelector('#showSlider').addEventListener('click', () => {
-                document.querySelector('.sidebar').style.display = 'block';
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.querySelector("a").getAttribute("href").slice(1) === current) {
+                    li.classList.add("active");
+                }
             });
-
-            document.querySelector('#hide').addEventListener('click', () => {
-                document.querySelector('.sidebar').style.display = 'none';
-            });
-        });
-        const adjectives = [
-   "Articulate",
-   
-    "Effective Speaker",
-    " dedicated Learner",
-
-    "Frontend Developer",
-    "Problem-solver",
-    
-    "Fitness-enthusiast",
-    "Connector",
-    "Web Developer"
-   
-];
-let currentIndex = 0;
-
-function updateText() {
-    const dynamicTextElement = document.getElementById("dynamic-text");
-    dynamicTextElement.textContent = adjectives[currentIndex];
-    currentIndex = (currentIndex + 1) % adjectives.length;
-}
-
-setInterval(updateText, 2000); // Change the adjective every 2 seconds
-
-function downloadFile() {
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1NEtlXlnLgNOSSAFSexzNHBQwtuhXFJse';
-    link.download = 'Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
+        };
     </script>
 </body>
 </html>
