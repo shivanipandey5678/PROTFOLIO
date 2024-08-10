@@ -32,7 +32,7 @@ nav {
     padding-left: 40px;
     cursor: pointer;
     letter-spacing: 1px;
-    font-size: clamp(35px, 7vw, 35px);
+    font-size: clamp(35px, 5vw, 35px);
 }
 
 ul {
@@ -120,16 +120,16 @@ ul li a:hover,nav a .active {
 
 h1 {
     color: white;
-    font-size: clamp(41px, 7vw, 48px);
+    font-size: clamp(41px, 4.5vw, 48px);
 }
 
 h3 {
-    font-size: clamp(26px, 4vw, 29px);
+    font-size: clamp(26px, 3vw, 29px);
 }
 
 h4 {
     color: white;
-    font-size: clamp(23px, 4vw, 29px);
+    font-size: clamp(23px, 3vw, 29px);
 }
 
 .section_subtitle {
@@ -280,7 +280,7 @@ span {
 }
 .about_text p{
     flex-basis: 50%;
-    font-size: clamp(22px,4vw,24px);
+    font-size: clamp(22px,3vw,24px);
     line-height: 1.7rem;
 }
 .about_text h5{
@@ -361,7 +361,7 @@ span {
     
     color: white;
     margin-bottom: 30px;
-    font-size: clamp(15px ,3vw,25px);
+    font-size: clamp(15px ,2.5vw,25px);
    width: 100%;
   text-align: center;
  }
@@ -396,10 +396,10 @@ span {
     flex-basis: 65%;
 }
 .project-details h3 span{
-    font-size: (25px,4vw,23px);
+    font-size: (25px,3vw,23px);
 }
 .project-details  p{
-    font-size: clamp(22px,4vw,22px);
+    font-size: clamp(22px,3vw,22px);
 }
 
 .project-img{
