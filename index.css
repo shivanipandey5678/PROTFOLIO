@@ -32,7 +32,7 @@ nav {
     padding-left: 40px;
     cursor: pointer;
     letter-spacing: 1px;
-    font-size: clamp(25px, 7vw, 35px);
+    font-size: clamp(35px, 7vw, 45px);
 }
 
 ul {
@@ -48,15 +48,17 @@ ul li a {
 
     text-decoration: none;
     color: white;
-    font-size: clamp(14px, 6vw, 18px);
+    font-size: clamp(20px, 6vw, 22px);
 }
 .sidebar li a {
     height: 100%;
-    
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-   
+    margin-bottom: 15px;
+ 
     color: white;
-    font-size: clamp(10px, 6vw, 20px);
+    font-size: clamp(28px, 6vw, 33px);
     
 }
 .sidebar li {
@@ -66,8 +68,8 @@ ul li a {
   
     align-items: center;
 }
-.sidebar img{
-   
+.sidebar li img{
+   margin-top: 160px;
     width: 35px;
 }
 
@@ -118,16 +120,16 @@ ul li a:hover,nav a .active {
 
 h1 {
     color: white;
-    font-size: clamp(38px, 7vw, 60px);
+    font-size: clamp(41px, 7vw, 60px);
 }
 
 h3 {
-    font-size: clamp(19px, 4vw, 25px);
+    font-size: clamp(26px, 4vw, 32px);
 }
 
 h4 {
     color: white;
-    font-size: clamp(18px, 4vw, 22px);
+    font-size: clamp(23px, 4vw, 31px);
 }
 
 .section_subtitle {
@@ -269,7 +271,7 @@ span {
 }
 .about img{
    flex-basis: 25%;
-   min-height: 100px;
+   min-height: 80px;
    max-height: 500px;
 
 }
@@ -278,11 +280,11 @@ span {
 }
 .about_text p{
     flex-basis: 50%;
-    font-size: clamp(16px,4vw,21px);
+    font-size: clamp(22px,4vw,28px);
     line-height: 1.7rem;
 }
 .about_text h5{
-    font-size: clamp(20px,4vw,27px);
+    font-size: clamp(25px,4vw,30px);
 }
 .responsive{
     display: none;
@@ -392,6 +394,12 @@ span {
 }
 .project-details{
     flex-basis: 65%;
+}
+.project-details h3 span{
+    font-size: (25px,4vw,30px);
+}
+.project-details  p{
+    font-size: clamp(22px,4vw,28px);
 }
 
 .project-img{

@@ -187,7 +187,8 @@
      </section>
 
 
-    <script>
+    
+     <script>
         // Dynamic text for the home page
         const roles = ["Frontend Developer", "Web Enthusiast", "Creative Designer"];
         let index = 0;
@@ -196,45 +197,62 @@
             dynamicText.textContent = roles[index];
             index = (index + 1) % roles.length;
         }, 3000);
-
+    
         // Function to handle opening the Google Drive link and downloading the file
         function handleResumeClick() {
-    // Open Google Drive link
-    window.open('https://drive.google.com/file/d/1QyC1dTLrMrv-xu4ehdcg4RLiI6bygSav/view?usp=sharing', '_blank');
-
-    // Create a link to download the file
-    const link = document.createElement('a');
-    link.href = './Assets/Resume-shivaniPandey.jpg'; // Corrected path
-    link.download = 'Resume-shivaniPandey.jpg';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-
+            // Open Google Drive link
+            window.open('https://drive.google.com/file/d/1B1yrIUgjY5RjUnUDgCUZcmy47H_QX_Of/view?usp=sharing', '_blank');
+    
+            // Create a link to download the file
+            const link = document.createElement('a');
+            link.href = './Assets/shivanipandey-resume.jpg'; // Corrected path
+            link.download = 'shivanipandey-resume.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    
         // Functions to toggle sidebar visibility
         function showSliderbar() {
             document.querySelector('.sidebar').style.display = 'block';
         }
-
-        function hideSlider() {
+    
+        function hideSlider(event) {
+            // Prevent default anchor behavior
+            event.preventDefault();
+    
+            // Get the href of the clicked link
+            const href = event.target.closest('a').getAttribute('href');
+            const targetSection = document.querySelector(href);
+    
+            // Close the sidebar
             document.querySelector('.sidebar').style.display = 'none';
+    
+            // Smooth scroll to the target section
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
         }
-
+    
+        // Attach hideSlider to all sidebar links
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', hideSlider);
+        });
+    
         // Adding active class to nav items
         const sections = document.querySelectorAll("section");
         const navLi = document.querySelectorAll("nav ul li");
-
+    
         window.onscroll = () => {
             let current = "";
-
+    
             sections.forEach((section) => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 60) {
                     current = section.getAttribute("id");
                 }
             });
-
+    
             navLi.forEach((li) => {
                 li.classList.remove("active");
                 if (li.querySelector("a").getAttribute("href").slice(1) === current) {
@@ -243,5 +261,6 @@
             });
         };
     </script>
+    
 </body>
 </html>
