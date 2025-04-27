@@ -1,7 +1,12 @@
 /* Global Styles */
+
 * {
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
+    color: white;
+}
+
+#hide{
     color: white;
 }
 
@@ -133,7 +138,7 @@ h4 {
 }
 
 .section_subtitle {
-    font-size: clamp(20px, 6vw, 30px);
+    font-size: clamp(30px, 6vw, 30px);
     text-align: center;
     color: white;
     text-decoration: underline;
@@ -305,6 +310,15 @@ span {
    
     font-weight: bold;
   }
+
+  .calendar-img {
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    transform: scale(1.1); /* 40% zoom */
+    transform-origin: top center;
+  }
+  
   
   .GitHubStats p {
     margin: 10px 0;
@@ -442,6 +456,7 @@ span {
     }
     #my_photo{
         width: 70%;
+        
     }
     .responsive{
         display: block;
