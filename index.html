@@ -56,7 +56,7 @@
                             style="width: 45px;" id="showSlider"></a></li>
             </ul>
             <ul class="sidebar">
-                <li onclick="hideSlider()"> <a href="#"><img src="./Assets/close.png" alt="" id="hide" style="color: white;"></a></li>
+                <li onclick="closeSidebar()"> <a href="#"><img src="./Assets/close.png" alt="" id="hide" style="color: white;"></a></li>
                 <li><a href="#HOME">Home</a></li>
                 <li><a href="#ABOUT">About Me</a></li>
                 <li><a href="#SKILL">Skill</a></li>
@@ -67,14 +67,32 @@
                 </li>
             </ul>
         </nav>
-        <section id="HOME">
-            <div class="content">
-                <h4>Hello, my name is</h4>
-                <h1>Shivani<span>pandey</span></h1>
-                <h3>I am a <span id="dynamic-text"></span></h3>
-                <button class="resume_btn" onclick="handleResumeClick()">Resume</button>
-                <button class="resume_btn"><a href="https://github.com/shivanipandey5678"
-                        target="_blank">Github</a></button>
+        <section id="HOME" class="hero-section">
+            <div class="hero-wrap">
+                <div class="content">
+                    <h4>Hello, my name is</h4>
+                    <h1>Shivani<span> Pandey</span></h1>
+                    <h3>I am a <span id="dynamic-text"></span></h3>
+                    <p class="hero-intro">MERN Stack Developer who loves building clean, fast web apps. Let's create something great together!</p>
+                    <div class="hero-btns">
+                        <button class="resume_btn" onclick="handleResumeClick()">Resume</button>
+                        <button class="resume_btn"><a href="https://github.com/shivanipandey5678" target="_blank">Github</a></button>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://www.linkedin.com/in/shivani-pandey-029600288/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/shivanipandey5678" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:shivanipandey0107@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-character-wrap">
+                        <img src="./Assets/hero-character.png" alt="Shivani - Developer" class="hero-character" />
+                        <span class="float-icon float-icon-1" title="React">React</span>
+                        <span class="float-icon float-icon-2" title="Node.js">Node</span>
+                        <span class="float-icon float-icon-3" title="MongoDB">Mongo</span>
+                        <span class="float-icon float-icon-4" title="JavaScript">JS</span>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -88,95 +106,74 @@
             </div>
             <div class="about_text">
                 <h3 class="not_responsive section_subtitle">About Me</h3>
-                <h5>Developer &<span> Designer</span></h5>
-                <p>As a passionate MERN Stack Developer, I bring a solid foundation in React, Node.js, Express, MongoDB,
-                    and Tailwind CSS, all fueled by my unwavering commitment to lifelong learning. I thrive in
-                    collaborative environments, eagerly soaking up knowledge from others and constantly seeking new
-                    opportunities to grow my skills. With a strong grip on frontend and backend technologies, I'm driven
-                    to continually refine my craft, explore new creative possibilities, and evolve into a better
-                    developer every day.</p>
+                <h5>Frontend · Cloud · Security · <span>Generative AI</span></h5>
+                <p>Passionate and versatile tech professional specializing in Frontend Development, Cloud, Security, and Generative AI. I have hands-on experience building scalable web applications using Next.js, React, Node.js, and MongoDB, along with a strong foundation in AWS fundamentals and cybersecurity concepts.</p>
+                <p>I have started learning and am actively building my skills in Generative AI and LLM-based applications—including prompt engineering, AI agents, conversational AI, persona design, RAG systems, vector search, and tool-based workflows using LangChain—and I'm constantly expanding this expertise.</p>
+                <p>Alongside my technical background, I bring 3 years of teaching experience, strong communication skills, and a continuous learning mindset. I enjoy building user-centric, performant applications and experimenting with modern UI libraries like Shadcn UI, Material UI, Magic UI, and design systems to create clean and scalable interfaces.</p>
             </div>
         </div>
     </section>
 
     <section class="Techstack" id="SKILL">
         <h2 class="section_subtitle">My <span>Technical</span> Skills</h2>
-        <div id="techstack">
-            <!-- Main MERN Stack Technologies -->
-            <span><img src="https://skillicons.dev/icons?i=react" alt="React.js" class="skillicon">
-                <h4>React.js</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=express" alt="Express.js" class="skillicon">
-                <h4>Express.js</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" class="skillicon">
-                <h4>Node.js</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" class="skillicon">
-                <h4>MongoDB</h4>
-            </span>
-
-            <!-- Additional Tech Skills -->
-            <span><img src="https://skillicons.dev/icons?i=html" alt="HTML5" class="skillicon">
-                <h4>HTML5</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=css" alt="CSS3" class="skillicon">
-                <h4>CSS3</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript" class="skillicon">
-                <h4>JavaScript </h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=python" alt="Python" class="skillicon">
-                <h4>Python</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" class="skillicon">
-                <h4>Tailwind CSS</h4>
-            </span>
-
-            <!-- Git and Development Tools -->
-            <span><img src="https://skillicons.dev/icons?i=git" alt="Git" class="skillicon">
-                <h4>Git</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="skillicon">
-                <h4>GitHub</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=postman" alt="Postman" class="skillicon">
-                <h4>Postman</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" class="skillicon">
-                <h4>Bootstrap</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" class="skillicon">
-                <h4>VSCode</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=vite" alt="Vite" class="skillicon">
-                <h4>Vite</h4>
-            </span>
-            <span><img src="https://skillicons.dev/icons?i=netlify" alt="Netlify" class="skillicon">
-                <h4>Netlify</h4>
-            </span>
-           
-
+        <p class="skills-oneliner">Frontend · Backend · Cloud · Generative AI · Clean UI</p>
+        <div class="skill-categories">
+            <!-- Frontend Development -->
+            <div class="skill-category">
+                <h3 class="skill-category-title">Frontend Development</h3>
+                <div class="techstack-grid">
+                    <span><img src="https://skillicons.dev/icons?i=html" alt="HTML5" class="skillicon"><h4>HTML5</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=css" alt="CSS3" class="skillicon"><h4>CSS3</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=javascript" alt="JavaScript" class="skillicon"><h4>JavaScript (ES6+)</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=react" alt="React" class="skillicon"><h4>React.js</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" class="skillicon"><h4>Next.js</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind" class="skillicon"><h4>Tailwind CSS</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=bootstrap" alt="Bootstrap" class="skillicon"><h4>Bootstrap</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=tailwind" alt="Chakra" class="skillicon"><h4>Chakra UI</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=tailwind" alt="Shadcn" class="skillicon"><h4>Shadcn UI</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=mui" alt="Material UI" class="skillicon"><h4>Material UI</h4></span>
+                </div>
+            </div>
+            <!-- Backend & Databases -->
+            <div class="skill-category">
+                <h3 class="skill-category-title">Backend & Databases</h3>
+                <div class="techstack-grid">
+                    <span><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" class="skillicon"><h4>Node.js</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=express" alt="Express" class="skillicon"><h4>Express.js</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=mongodb" alt="MongoDB" class="skillicon"><h4>MongoDB</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=mongodb" alt="Mongoose" class="skillicon"><h4>Mongoose</h4></span>
+                </div>
+            </div>
+            <!-- Generative AI & LLMs -->
+            <div class="skill-category">
+                <h3 class="skill-category-title">Generative AI & LLMs</h3>
+                <div class="techstack-grid">
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Prompt" class="skillicon"><h4>Prompt Engineering</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="AI Agents" class="skillicon"><h4>AI Agents</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="LangChain" class="skillicon"><h4>LangChain</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="RAG" class="skillicon"><h4>RAG</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Vector DBs" class="skillicon"><h4>Vector Databases</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Conversational AI" class="skillicon"><h4>Conversational AI</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Multi-modal" class="skillicon"><h4>Multi-modal AI</h4></span>
+                </div>
+            </div>
+            <!-- Developer Tools & Platforms -->
+            <div class="skill-category">
+                <h3 class="skill-category-title">Developer Tools & Platforms</h3>
+                <div class="techstack-grid">
+                    <span><img src="https://skillicons.dev/icons?i=git" alt="Git" class="skillicon"><h4>Git</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="skillicon"><h4>GitHub</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=postman" alt="Postman" class="skillicon"><h4>Postman</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=vscode" alt="VS Code" class="skillicon"><h4>VS Code</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=vite" alt="Vite" class="skillicon"><h4>Vite</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=vercel" alt="Vercel" class="skillicon"><h4>Vercel</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Lovable AI" class="skillicon"><h4>Lovable AI</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=openai" alt="Cursor AI" class="skillicon"><h4>Cursor AI</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=aws" alt="AWS" class="skillicon"><h4>AWS</h4></span>
+                    <span><img src="https://skillicons.dev/icons?i=netlify" alt="Netlify" class="skillicon"><h4>Netlify</h4></span>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <!-- GitHub Stats and Language Card Sections -->
-    <section class="GitHubStats" id="GITSTATS">
-        <h2 class="section_subtitle">GitHub Stats</h2>
-        <p><img class="first git"
-                src="https://github-readme-stats.vercel.app/api/top-langs?username=shivanipandey5678&show_icons=true&locale=en&layout=compact&bg_color=30,e96443,904e95&title_color=fff&text_color=fff"
-                alt="shivanipandey5678" /></p>
-        <p>
-                    <img class="third git"
-                      src="https://streak-stats.demolab.com/?user=shivanipandey5678&background=30,e96443,904e95&stroke=ffffff&ring=ffffff&fire=ffb86c&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ffffff&sideLabels=ffffff&dates=ffffff"
-                      alt="shivanipandey5678" />
-        </p>
-                  
-        <H2 class="section_subtitle">Github Calendar</h2>
-        <div class="react-activity-calendar" style="text-align: center;">
-                <img src="https://ghchart.rshah.org/shivanipandey5678" alt="GitHub Contribution Chart" class="calendar-img">
-        </div>
-              
     </section>
 
     <section id="PROJECT">
@@ -309,7 +306,6 @@
 
 
         </div>
-        </div>
     </section>
 
     <section id="CONTACT">
@@ -372,54 +368,48 @@
             document.body.removeChild(link);
         }
 
-        // Functions to toggle sidebar visibility
         function showSliderbar() {
-            document.querySelector('.sidebar').style.display = 'block';
+            document.querySelector('.sidebar').style.display = 'flex';
+        }
+
+        function closeSidebar() {
+            document.querySelector('.sidebar').style.display = 'none';
         }
 
         function hideSlider(event) {
-            // Prevent default anchor behavior
+            const a = event.target.closest('a');
+            if (!a || a.getAttribute('href') === '#') return;
             event.preventDefault();
-
-            // Get the href of the clicked link
-            const href = event.target.closest('a').getAttribute('href');
+            const href = a.getAttribute('href');
             const targetSection = document.querySelector(href);
-
-            // Close the sidebar
             document.querySelector('.sidebar').style.display = 'none';
-
-            // Smooth scroll to the target section
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (targetSection) targetSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Attach hideSlider to all sidebar links
         document.querySelectorAll('.sidebar a').forEach(link => {
             link.addEventListener('click', hideSlider);
         });
 
-        // Adding active class to nav items
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll("nav ul li");
+        window.addEventListener('scroll', function() {
+            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
 
-        window.onscroll = () => {
+        const sections = document.querySelectorAll("section[id]");
+        const mainNav = document.querySelector("nav > ul:first-of-type");
+
+        window.addEventListener('scroll', () => {
             let current = "";
-
+            const y = window.scrollY;
             sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute("id");
-                }
+                if (y >= section.offsetTop - 80) current = section.getAttribute("id");
             });
-
-            navLi.forEach((li) => {
+            if (!mainNav) return;
+            mainNav.querySelectorAll("li").forEach((li) => {
+                const a = li.querySelector("a[href^='#']");
                 li.classList.remove("active");
-                if (li.querySelector("a").getAttribute("href").slice(1) === current) {
-                    li.classList.add("active");
-                }
+                if (a && a.getAttribute("href").slice(1) === current) li.classList.add("active");
             });
-        };
+        });
     </script>
 
 </body>
